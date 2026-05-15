@@ -1,0 +1,95 @@
+.feature-row {
+    gap: 24px;
+    align-items: center;
+    padding: 28px;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 14px;
+}
+
+.section-title .accent {
+    color: var(--primary);
+}
+
+.section-text {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 42ch;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.status-card {
+    padding: 20px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(96, 108, 164, 0.12);
+}
+
+.status-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    background: rgba(90, 73, 255, 0.08);
+    color: var(--primary);
+}
+
+.status-badge.danger {
+    background: rgba(226, 90, 90, 0.10);
+    color: var(--danger);
+}
+
+.status-badge.success {
+    background: rgba(31, 186, 114, 0.10);
+    color: var(--success);
+}
+
+.status-card strong {
+    display: block;
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+}
+
+.status-card span {
+    color: var(--muted);
+    line-height: 1.45;
+    font-size: 0.94rem;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.mini-card {
+    padding: 20px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    background: rgba(255, 255, 255, 0.84);
+}
+
+.mini-card strong {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+}
+
+.mini-card span {
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.55;
+}

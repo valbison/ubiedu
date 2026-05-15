@@ -1,0 +1,10 @@
+.section {
+    padding: 34px 0;
+}
+
+.section-card {
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-xl);
+}

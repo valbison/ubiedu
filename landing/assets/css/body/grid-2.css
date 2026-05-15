@@ -1,0 +1,239 @@
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.panel {
+    padding: 25px;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: var(--shadow);
+}
+.panel-info{
+    display: grid;
+    grid-template-columns: 1.15fr 0.5fr;
+    
+}
+
+.panel h3 {
+    font-size: clamp(1.5rem, 2.4vw, 1.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.panel h3 .accent {
+    color: var(--primary);
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.subject {
+    padding: 16px 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+    text-align: center;
+    font-size: 0.94rem;
+    line-height: 1.45;
+}
+
+.subject .icon {
+    display: block;
+    font-size: 1.65rem; /* Mantido caso use emoji em algum momento */
+    margin-bottom: 8px;
+    
+    /* Adicione estas linhas para centralizar a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nova regra essencial para controlar o tamanho da imagem */
+.subject .icon img {
+    width: 1.65rem;      /* Mesma largura do seu font-size antigo */
+    height: 1.65rem;     /* Mesma altura para manter proporção quadrada */
+    object-fit: contain; /* Evita que a imagem distorça ou estique */
+}
+
+.materias-info {
+    margin-top: 18px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 16px 30px rgba(90, 73, 255, 0.26);
+    border-radius: 18px;
+    padding: 18px 20px;
+}
+
+
+
+
+.checklist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+    margin: 3rem 0;
+
+}
+
+.check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #2b345f;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+.check::before {
+    content: "✓";
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    flex: none;
+    display: grid;
+    place-items: center;
+    background: rgba(31, 186, 114, 0.12);
+    color: var(--success);
+    font-weight: 900;
+    margin-top: 1px;
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 14px;
+    align-items: center;
+}
+
+.game-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.game-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.game-item .bullet {
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background: rgba(90, 73, 255, 0.1);
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    flex: none;
+}
+
+.game-item span {
+    color: #2a335d;
+    font-weight: 500;
+}
+
+.game-illustration {
+    position: relative;
+    min-height: 340px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(90, 73, 255, 0.15), transparent 22%),
+        radial-gradient(circle at 70% 20%, rgba(31, 186, 114, 0.13), transparent 20%),
+        url("/landing/assets/images/game-ubedu.png") center/contain no-repeat,
+        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+}
+
+.cta-illustration-1 {
+    position: relative;
+    min-height: 40px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(90, 73, 255, 0.15), transparent 22%),
+        radial-gradient(circle at 70% 20%, rgba(31, 186, 114, 0.13), transparent 20%),
+        url("/landing/assets/images/bolsa-ubiedu.png") center/contain no-repeat,
+        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+}
+
+
+
+.cta-illustration-2 {
+position: relative; /* Mantém como referência para a imagem absoluta */
+min-height: 255px;
+border-radius: 28px;
+overflow: visible; /* CRUCIAL: permite que a imagem vase para fora */
+
+/* Mantive apenas os seus gradientes no background */
+background:
+radial-gradient(circle at 30% 20%, rgba(90, 73, 255, 0.15), transparent 22%),
+radial-gradient(circle at 70% 20%, rgba(31, 186, 114, 0.13), transparent 20%),
+linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+}
+
+.vazada-img {
+position: absolute;
+
+/* Controla o tamanho dela em relação ao contêiner */
+height: 120%; /* Faz ela ser 20% maior que a altura do contêiner */
+width: auto;  /* Mantém a proporção correta para não distorcer */
+
+/* Centraliza a imagem verticalmente */
+top: 50%;
+transform: translateY(-50%);
+
+/* Empurra ela para a direita, fazendo vazar para fora do contêiner */
+right: -20px; /* Altere este valor para controlar o quanto ela vaza */
+
+/* Garante que ela não perca qualidade ao redimensionar */
+object-fit: contain; 
+}
+
+
+
+.feature-band {
+    background-color: rgba(250, 235, 215, 0.712);
+    padding: 20px;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    box-shadow: var(--shadow);
+}
+
+.feature-band-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.cta {
+    padding-bottom: 58px;
+}
+
+.cta-card {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 18px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(90, 73, 255, 0.09), rgba(236, 240, 255, 0.95));
+    border: 1px solid rgba(96, 108, 164, 0.12);
+    box-shadow: var(--shadow);
+}
+
+.cta .section-title {
+    margin-bottom: 12px;
+}

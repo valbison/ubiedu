@@ -1,0 +1,101 @@
+/* Responsive adjustments */
+
+@media (max-width: 1080px) {
+    .hero-grid,
+    .feature-row,
+    .grid-2,
+    .feature-band-grid,
+    .cta-card,
+    .game-card,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .status-grid,
+    .feature-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .subject-grid,
+    .checklist {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-visual {
+        min-height: 560px;
+    }
+
+    .hero-illustration {
+        right: 3%;
+        width: min(70%, 460px);
+    }
+}
+
+@media (max-width: 760px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .hero {
+        padding-top: 34px;
+    }
+
+    .hero-title {
+        max-width: none;
+    }
+
+    .hero-points,
+    .status-grid,
+    .feature-list,
+    .steps-grid,
+    .subject-grid,
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .hero-illustration {
+        width: 92%;
+        right: 4%;
+        left: 4%;
+        margin: 0 auto;
+    }
+
+    .hero-floating.one {
+        left: 2%;
+    }
+
+    .hero-floating.two {
+        right: 2%;
+    }
+
+    .hero-floating.three {
+        right: 2%;
+    }
+
+    .section {
+        padding: 22px 0;
+    }
+
+    .feature-row,
+    .panel,
+    .feature-band,
+    .cta-card {
+        padding: 20px;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
