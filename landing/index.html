@@ -362,7 +362,27 @@
                 </div>
             </div>
         </section>
+        <div class="privacidade-politica">
+            <a href="/public/politics_privacy.html">
+            <i class="fa-solid fa-shield-halved"></i>
+            </a>
+        </div>
     </main>
+
+
+    <!-- Estrutura do Modal de Cookies -->
+    <div id="modal-cookies" class="cookie-container">
+        <div class="cookie-conteudo">
+            <div class="cookie-texto">
+                <h3><i class="fa-solid fa-cookie-bite"></i> Nós valorizamos sua privacidade</h3>
+                <p>Utilizamos cookies para melhorar sua experiência de navegação e analisar nosso tráfego. Ao clicar em "Aceitar", você concorda com o uso de cookies de acordo com nossa <a href="/public/politics_privacy.html">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-botoes">
+                <button id="btn-recusar" class="btn-cookie btn-secundario">Recusar</button>
+                <button id="btn-aceitar" class="btn-cookie btn-primario">Aceitar</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -380,6 +400,7 @@
                         <a href="#sobre">Sobre</a>
                         <a href="#entrar">Contato</a>
                         <a href="#criar-conta">GitHub</a>
+                        <a href="/public/politics_privacy.html">Política de Privacidade</a>
                     </div>
                 </div>
 
@@ -402,6 +423,32 @@
     <script>
         // Captura o ano atual do sistema e insere na tag span
         document.getElementById("ano-atual").textContent = new Date().getFullYear();
+
+
+        // Lógica para esconder o modal após o clique
+        const modalCookies = document.getElementById('modal-cookies');
+        const btnAceitar = document.getElementById('btn-aceitar');
+        const btnRecusar = document.getElementById('btn-recusar');
+
+        // Evento do botão Aceitar
+        btnAceitar.addEventListener('click', () => {
+            modalCookies.style.display = 'none';
+            // Dica profissional: Salva a decisão no navegador para não incomodar o usuário de novo
+            localStorage.setItem('cookiesAceitos', 'true');
+        });
+
+        // Evento do botão Recusar
+        btnRecusar.addEventListener('click', () => {
+            modalCookies.style.display = 'none';
+            localStorage.setItem('cookiesAceitos', 'false');
+        });
+
+        // Verifica se o usuário já respondeu antes para não exibir o modal de novo
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('cookiesAceitos')) {
+                modalCookies.style.display = 'none';
+            }
+        });
     </script>
 
     <script src = "/landing/assets/js/script.js"></script>

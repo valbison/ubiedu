@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - UbiEdu</title>
+    <link rel="stylesheet" href="/public/main.css">
+    <link rel="icon" href="/landing/assets/images/logo_1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+<body>
+   <header class="header">
+        <h1 class="titulo">Carregando...</h1>
+
+
+
+        <!-- botão hamburger -->
+        <button class="icone-hamburguer" id="btn-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+
+
+    <nav class="nav">
+        <ul class="menu-navegacao">
+            <li class="modelo-topico">
+                <a class="link-topico" href="#">Carregando...</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="versao-info">
+        <!-- Informações sobre a versão mais recente e data de atualização -->
+        <h2>Versão mais recente: <span id="versao-recente">Carregando...</span> data de atualização: <span id="data-atualizacao">Carregando....</span>.</h2>
+    </div>
+
+    <div id="politica">
+        <!-- Tópicos serão inseridos aqui via backend ou JavaScript -->
+        <h3 class="topico">Carregando...</h3>
+        <p class="conteudo">Carregando...</p>
+    </div>
+    <div class="versoes">
+        <!-- Histórico de versões para transparência e rastreabilidade -->
+        <h3>Histórico de Versões</h3>
+        <ul>
+            <li class="modelo">
+                <a href="#" data-versao="" class="link-historico">
+                    Versão <strong class="versao">Carregando...</strong> - Atualizado em <strong class="ano">Carregando...</strong>.
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const btn = document.getElementById("btn-menu");
+        const nav = document.querySelector("nav");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+    <script src="/public/script.js"></script>
+</body>
+</html>

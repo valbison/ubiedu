@@ -2,3 +2,128 @@
     width: min(100% - 32px, var(--container));
     margin: 0 auto;
     }
+
+.privacidade-politica{
+    position: fixed;
+    bottom: 20px;          /* Distância do fundo da tela */
+    right: 20px;           /* Distância da lateral direita */
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;          /* Cor do ícone */
+    width: 50px;           /* Largura do botão */
+    height: 50px;          /* Altura do botão */
+    border-radius: 50px;   /* Deixa o botão totalmente redondo */
+    display: flex;
+    align-items: center;   /* Centraliza o ícone verticalmente */
+    justify-content: center;/* Centraliza o ícone horizontalmente */
+    font-size: 20px;       /* Tamanho do ícone */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para dar efeito flutuante */
+    z-index: 9999;         /* Garante que ele fique por cima de tudo */
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+
+.privacidade-politica .fa-solid{
+    font-size: 25px;
+}
+
+/* Efeito leve ao passar o mouse por cima */
+.privacidade-politica:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Estilização do Banner/Modal */
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o modal horizontalmente */
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10000; /* Fica acima de tudo, inclusive do botão flutuante */
+    font-family: sans-serif;
+    display: block; /* Começa visível para teste */
+}
+
+.cookie-container .fa-solid{
+    color: var(--primary-dark);
+}
+
+.cookie-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cookie-texto h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cookie-texto p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.cookie-texto a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.cookie-botoes {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+/* Botões */
+.btn-cookie {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primario {
+   background: var(--primary); /* Use sua variável var(--primary) aqui */
+    color: white;
+}
+
+.btn-primario:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secundario {
+    background-color: #f1f1f1;
+    color: #333333;
+}
+
+.btn-secundario:hover {
+    background-color: #e2e2e2;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+    .cookie-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cookie-botoes {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
